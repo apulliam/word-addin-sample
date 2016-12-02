@@ -1,9 +1,7 @@
 ﻿
 
- export default
- class MainController {
+ export default class MainController {
 
-//
     constructor() {
         // The initialize function must be run each time a new page is loaded
         Office.initialize = (reason: Office.InitializationReason) => {
@@ -23,6 +21,3 @@
         };
      }
 }
-
-//export = MainController;
-

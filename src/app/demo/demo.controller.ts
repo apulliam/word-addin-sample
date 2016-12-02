@@ -7,8 +7,7 @@ interface ContentControl {
     title: string;
 }
 
-export default
- class DemoController {
+export default class DemoController {
 
     constructor() {
         this.getAllContentControls();
@@ -98,5 +97,3 @@ export default
             });
     }
 }
-
-//export = DemoController;
