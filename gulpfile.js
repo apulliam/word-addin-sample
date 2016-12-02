@@ -75,7 +75,6 @@ gulp.task('prod-rollup', function () {
             rollupTypescript({
                 typescript: require('typescript')
             }),
-            rollupSourcemaps(),
             rollupNodeResolve({
                 jsnext: true,
                 main: true,
