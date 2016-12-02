@@ -1,0 +1,14 @@
+﻿{
+  "compilerOptions": {
+    "noEmitOnError": true,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "target": "es5",
+    "rootDir": "src",
+    "outDir": "dist",
+    "removeComments": false,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true
+
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "name": "word-addin-sample",
+  "private": true,
+  "scripts": {
+    "postinstall": "typings i"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.2",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-run": "^1.7.1",
+    "gulp-sourcemaps": "^1.9.1",
+    "rollup": "^0.36.4",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-sourcemaps": "^0.4.1",
+    "rollup-plugin-typescript": "^0.8.1",
+    "rollup-plugin-uglify": "^1.0.1",
+    "rollup-stream": "^1.14.0",
+    "run-sequence": "^1.2.2",
+    "typescript": "^2.0.10",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "jquery": "^3.1.1",
+    "office-ui-fabric": "^2.6.2"
+  }
+}

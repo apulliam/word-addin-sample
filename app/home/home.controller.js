@@ -1,0 +1,45 @@
+"use strict";
+var HomeController = (function () {
+    function HomeController($scope) {
+        this.$scope = $scope;
+        this.header = "Welcome";
+        this.showNotification = false;
+    }
+    // Reads data from current document selection and displays a notification
+    HomeController.prototype.getDataFromSelection = function () {
+        var _this = this;
+        Office.context.document.getSelectedDataAsync(Office.CoercionType.Text, function (result) {
+            if (result.status === Office.AsyncResultStatus.Succeeded) {
+                _this.setNotification('The selected text is:', '"' + result.value + '"');
+            }
+            else {
+                _this.setNotification('Error:', result.error.message);
+            }
+            // seems we need to explicity apply scope when changing state from Office callback
+            _this.$scope.$apply();
+        });
+    };
+    //    private onGetSelectedData(result: Office.AsyncResult): void  {
+    //                     if (result.status === Office.AsyncResultStatus.Succeeded) {
+    //                         this.setNotification('The selected text is:', '"' + result.value + '"');
+    //                     } else {
+    //                         this.setNotification('Error:', result.error.message);
+    //                     }
+    //                     // seems we need to explicity apply scope when changing state from Office callback
+    //                     this.$scope.$apply();
+    //                 }
+    HomeController.prototype.hideNotification = function () {
+        this.showNotification = false;
+    };
+    // After initialization, expose a common notification function
+    HomeController.prototype.setNotification = function (header, body) {
+        this.notification = { header: header, body: body };
+        this.showNotification = true;
+    };
+    ;
+    HomeController.$inject = ["$scope"];
+    return HomeController;
+}());
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = HomeController;
+//export = HomeController; 
